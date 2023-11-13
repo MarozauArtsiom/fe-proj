@@ -1,0 +1,17 @@
+{
+  "name": "frontend-challenge",
+  "version": "1.0.0",
+  "description": "Chelenge task for FE developers",
+  "author": "Artsiom",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "yarn workspace @frontend-challenge/web start",
+    "test": "yarn workspace @frontend-challenge/web test"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  }
+}
