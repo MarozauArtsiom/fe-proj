@@ -11,7 +11,9 @@
   },
   "workspaces": {
     "packages": [
-      "packages/*"
+      "packages/web",
+      "packages/blog/api",
+      "packages/blog/web"
     ]
   }
 }
