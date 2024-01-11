@@ -1,0 +1,34 @@
+.Post {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.AuthorInfo {
+  display: flex;
+  align-items: center;
+}
+
+.Avatar {
+  border-radius: 50%;
+  height: 2rem;
+}
+
+.AuthorName {
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+.CreationDate {
+  margin-left: 1rem;
+  font-size: .75rem;
+}
+
+.CommentList {
+  margin-left: 1rem;
+  padding-left: .5rem;
+  border-left: solid 1px gray;
+}
+
+.CommentText {
+  font-style: italic;
+}
