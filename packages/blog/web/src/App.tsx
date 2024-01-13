@@ -2,16 +2,13 @@ import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { Posts, type AvailableFilters, type FilterState } from './Posts';
+import { Posts } from './Posts';
 
 async function getData() {
   const data = await fetch('http://localhost:3000/api/data');
 
   return await data.json();
 }
-
-const initialFilterList: AvailableFilters[] = ['rating'];
-const initialFilterState: FilterState = { rating: 5 };
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,8 +22,13 @@ function App() {
 
   return (
     <>
-      <Posts data={posts} filters={initialFilterList} filterDefaults={initialFilterState} />
-      {/* <Posts data={posts} /> */}
+      <Posts data={posts}>
+        <Posts.FilterPanel>
+          <Posts.FilterPanel.RatingFilter initialState={3} />
+        </Posts.FilterPanel>
+        <Posts.PostList />
+      </Posts>
+
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
