@@ -4,3 +4,10 @@
   border-radius: .5rem;
   text-align: left;
 }
+
+.FilterContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}

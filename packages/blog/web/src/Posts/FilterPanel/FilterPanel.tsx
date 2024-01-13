@@ -9,7 +9,7 @@ export function FilterPanel({ children }: FilterPanelProps) {
   return (
     <div className={classes.FilterPanel}>
       <h2>Filter panel:</h2>
-      <div>
+      <div className={classes.FilterContainer}>
         {children}
       </div>
     </div>

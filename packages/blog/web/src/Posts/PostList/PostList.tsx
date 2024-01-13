@@ -35,7 +35,6 @@ function Post({ rating, text, author, avatar_url, created, comments }: PostData)
       </div>
       <div className={classes.CommentText}>{text}</div>
       {hasComments && <CommentsList comments={comments} />}
-      <hr/>
     </div>
   );
 }
