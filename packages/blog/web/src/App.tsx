@@ -1,20 +1,34 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { Posts } from './Posts';
+
+async function getData() {
+  const data = await fetch('http://localhost:3000/api/data');
+
+  return await data.json();
+}
 
 function App() {
   const [count, setCount] = useState(0)
+  const [posts, setPosts] = useState([]);
 
-  async function getData() {
-    const data = await fetch('http://localhost:3000/api/data');
-    console.log('data', await data.json());
-  }
-
-  getData();
+  useEffect(() => {
+    getData().then((data) => {
+      setPosts(data);
+    });
+  }, []);
 
   return (
     <>
+      <Posts data={posts}>
+        <Posts.FilterPanel>
+          <Posts.FilterPanel.RatingFilter initialState={3} />
+        </Posts.FilterPanel>
+        <Posts.PostList />
+      </Posts>
+
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
