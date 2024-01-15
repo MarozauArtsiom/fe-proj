@@ -24,7 +24,7 @@ function App() {
     <>
       <Posts data={posts}>
         <Posts.FilterPanel>
-          <Posts.FilterPanel.RatingFilter initialState={3} />
+          <Posts.FilterPanel.RatingFilter defaultValue={3} />
         </Posts.FilterPanel>
         <Posts.PostList />
       </Posts>

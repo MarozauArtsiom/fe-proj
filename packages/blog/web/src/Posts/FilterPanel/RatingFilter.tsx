@@ -4,14 +4,15 @@ import { useFiltersContext } from '../filters.provider';
 import { getRatingString } from '../utils';
 
 type RatingFilterProps = {
-  initialState?: Rating,
+  defaultValue?: Rating;
+  disabled?: boolean;
 };
 
-export function RatingFilter({ initialState }: RatingFilterProps) {
+export function RatingFilter({ defaultValue, disabled = false  }: RatingFilterProps) {
   const { filters, setFilters } = useFiltersContext();
 
   React.useEffect(() => {
-    if (initialState) setFilters({ ...filters, rating: initialState });
+    if (defaultValue) setFilters({ ...filters, rating: defaultValue });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -31,7 +32,13 @@ export function RatingFilter({ initialState }: RatingFilterProps) {
   return (
     <div>
       <label htmlFor='rating-select'>Select rating:</label>
-      <select name="rating" id="rating-select" value={filters.rating} onChange={handleRatingChange}>
+      <select
+        name="rating"
+        id="rating-select"
+        value={filters.rating}
+        disabled={disabled}
+        onChange={handleRatingChange}
+      >
         <option key="0" value="0">--Please choose an option--</option>
         {
           RATINGS.map((rating) => (
