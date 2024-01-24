@@ -4,23 +4,22 @@
 
 This is a project to test your FE skill
 
-## How to run
+## Installation
 
 1. Clone this repo
 2. install yarn: `npm install -g yarn`
-3. Run `npm install`
-4. Run `npm start`
 
 ## Tasks
 
 1. UT
-    - Run UT in `packages/web`
+    - Run UT in `npm run web:test`
     - Fix all errors
-2. FE
-    - Run `npm run dev` in `packages/web`
-    - Visualize the data from the API in the WEB application.
-    - Use `packages/blog` as API
-    - Use `packages/web` as WEB application
+2. Blog
+    - Run FE: `npm run blog:web:start`
+    - Run BE: `npm run blog:api:start`
+    - Visualize the data from the API in the WEB application, here is an example what is expected:
+
+![Blog](./packages/blog/example-view.png)
 
 ## Rules
 

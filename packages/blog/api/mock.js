@@ -6,6 +6,44 @@ const data = [
     author: "Olivia",
     avatar_url: "https://randomuser.me/api/portraits/men/1.jpg",
     created: "2023-03-15T08:30:00Z",
+    comments: [
+      {
+        author: "Author 1",
+        text: "Text from Author 1",
+        comments: [
+          {
+            author: "Author 2",
+            text: "Text from Author 2",
+            comments: [
+              {
+                author: "Author 1",
+                text: "Reply from Author 1",
+                comments: [
+                  {
+                    author: "Author 2",
+                    text: "Reply from Author 2",
+                    comments: [
+                      {
+                        author: "Author 4",
+                        text: "Comment from Author 4",
+                      },
+                      {
+                        author: "Author 5",
+                        text: "Comment from Author 5",
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            author: "Author 3",
+            text: "Text from Author 3",
+          },
+        ],
+      },
+    ],
   },
   {
     rating: 1,

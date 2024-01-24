@@ -19,3 +19,5 @@
 ## Task
 
 Visualize the data from the API in the WEB application.
+expected:
+![Blog](./example-view.png)
