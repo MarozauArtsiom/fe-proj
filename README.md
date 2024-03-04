@@ -11,15 +11,15 @@ This is a project to test your FE skill
 
 ## Tasks
 
-1. UT
-    - Run UT in `npm run web:test`
-    - Fix all errors
-2. Blog
+1. Blog
     - Run FE: `npm run blog:web:start`
     - Run BE: `npm run blog:api:start`
     - Visualize the data from the API in the WEB application, here is an example what is expected:
 
 ![Blog](./packages/blog/example-view.png)
+2. UT
+    - Run UT in `npm run web:test`
+    - Fix all errors
 
 ## Rules
 
