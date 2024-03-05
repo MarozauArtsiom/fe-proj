@@ -8,6 +8,7 @@ This is a project to test your FE skill
 
 1. Clone this repo
 2. install yarn: `npm install -g yarn`
+3. Install dependencies: `npm i`
 
 ## Tasks
 
