@@ -6,10 +6,10 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "web:start": "yarn workspace @frontend-challenge/web start",
-    "web:test": "yarn workspace @frontend-challenge/web test",
-    "blog:api:start": "yarn workspace @frontend-challenge/blog-api start",
-    "blog:web:start": "yarn workspace @frontend-challenge/blog-web dev"
+    "web:start": "npm run start --workspace=@frontend-challenge/web",
+    "web:test": "npm run test --workspace=@frontend-challenge/web",
+    "blog:api:start": "npm run start --workspace=@frontend-challenge/blog-api",
+    "blog:web:start": "npm run dev --workspace=@frontend-challenge/blog-web"
   },
   "workspaces": {
     "packages": [
